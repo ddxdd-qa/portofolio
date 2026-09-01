@@ -1,0 +1,156 @@
+/* Accessibility and interaction refinements */
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 100;
+  transform: translateY(-180%);
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--text);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(23,33,33,.18);
+}
+
+.skip-link:focus { transform: translateY(0); }
+
+a:not(.button):not(.project-card):not(.personal-project-card):not(.nav-cv):not(.contact-links a):not(.brand):hover {
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+.text-link,
+.project-link,
+.contact-links a,
+.qa-lab-footer a,
+.personal-project-links a,
+.case-back,
+.case-closing .project-link { transition: color .2s ease, border-color .2s ease, opacity .2s ease; }
+
+.text-link,
+.case-back,
+.case-closing .project-link { text-decoration: underline; text-underline-offset: .2em; }
+
+.text-link:hover,
+.project-link:hover,
+.qa-lab-footer a:hover,
+.personal-project-links a:hover,
+.case-back:hover,
+.case-closing .project-link:hover { color: var(--accent-dark); text-decoration: underline; text-underline-offset: .2em; }
+
+.dark .project-link:hover,
+.section-dark .project-card strong:hover { color: #7be3e8; }
+
+.contact-links a:hover { color: #fff; border-bottom-color: #fff; text-decoration: none; }
+
+.nav-cv:hover { background: var(--text); color: #fff; border-color: var(--text); }
+
+.button-secondary,
+.nav-cv,
+.qa-run-button { font-size: 0; }
+.button-secondary::before { content: "LinkedIn"; font-size: .95rem; }
+.nav-cv::before { content: "Download CV"; font-size: .9rem; }
+.qa-run-button::before { content: "RUN QA SUITE"; font-size: .72rem; }
+.button-primary { font-size: 1rem; }
+
+.timeline-role { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; margin: 0 0 10px; font-weight: 600; color: var(--accent-dark); }
+.timeline-role span { display: inline-flex; align-items: center; width: fit-content; max-width: 100%; margin: 0; padding: 7px 12px; box-sizing: border-box; white-space: normal; font-family: "Space Grotesk", sans-serif; font-size: .68rem; line-height: 1; min-height: 29px; letter-spacing: .12em; border: 1px solid var(--accent); border-radius: 999px; }
+
+.expertise-card { position: relative; overflow: hidden; }
+.expertise-card::after { position: absolute; top: 24px; right: 24px; width: 54px; height: 54px; display: grid; place-items: center; border: 1px solid rgba(25,155,163,.28); border-radius: 50%; color: var(--accent-dark); font-family: "Space Grotesk", sans-serif; font-size: 1.35rem; line-height: 1; opacity: .9; box-shadow: inset 0 0 0 7px rgba(66,199,206,.05); pointer-events: none; }
+.expertise-card:nth-child(1)::after { content: "✓"; }
+.expertise-card:nth-child(2)::after { content: "◇"; }
+.expertise-card:nth-child(3)::after { content: "⌘"; }
+.expertise-card:nth-child(4)::after { content: "◐"; }
+.expertise-card::before { content: ""; position: absolute; top: 51px; right: 51px; width: 70px; height: 1px; background: rgba(25,155,163,.16); transform: rotate(-45deg); transform-origin: right center; pointer-events: none; }
+
+/* Case study cards: no logos */
+.project-card-logo { display: none !important; }
+.project-card > span { padding-right: 0 !important; }
+.project-card-logo + h3 { margin-top: 0 !important; }
+
+.project-card:focus-visible,
+.personal-project-card:focus-visible,
+.button:focus-visible,
+.nav-cv:focus-visible,
+.contact-links a:focus-visible,
+.text-link:focus-visible,
+.project-link:focus-visible,
+.case-back:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
+
+html,
+body { max-width: 100%; overflow-x: hidden; overflow-x: clip; }
+
+.text-link,
+.qa-lab-footer a,
+.personal-project-links a,
+.contact-links a,
+.project-card-featured strong { font-size: 0; }
+
+.text-link::before,
+.qa-lab-footer a::before,
+.personal-project-links a::before,
+.contact-links a::before,
+.project-card-featured strong::before { display: inline-block; font-size: 1rem; line-height: inherit; color: inherit; }
+
+.text-link::before { content: "My professional journey"; text-decoration: underline; text-underline-offset: .2em; }
+.qa-lab-footer a::before { content: "View Playwright suite on GitHub"; }
+.personal-project-links a::before { content: "View live"; text-decoration: underline; text-underline-offset: .2em; }
+.project-card-featured strong::before { content: "View case study"; text-decoration: underline; text-underline-offset: .2em; }
+
+.contact-links a { border-bottom: 0; text-decoration: none; }
+.contact-links a::before { text-decoration: underline; text-underline-offset: .2em; }
+.contact-links a:nth-child(1)::before { content: "Email"; }
+.contact-links a:nth-child(2)::before { content: "LinkedIn"; }
+.contact-links a:nth-child(3)::before { content: "GitHub"; }
+
+.button-secondary { width: 180px !important; min-width: 180px !important; max-width: 180px !important; flex: 0 0 180px; box-sizing: border-box; padding: 14px 19px; gap: 0; justify-content: center; align-items: center; text-align: center; font-size: 0 !important; }
+.button-secondary::before { content: "LinkedIn"; display: inline-block; width: auto; flex: 0 0 auto; margin: 0; padding: 0; font-size: .95rem !important; line-height: 1.2; text-align: center; }
+.button-secondary span { display: none !important; }
+
+.qa-run-button { font-size: 0 !important; justify-content: center; align-items: center; text-align: center; }
+.qa-run-button::before { font-size: .72rem !important; }
+.qa-run-button:hover { background: var(--accent-dark); color: #fff; }
+
+.project-card-featured strong,
+.project-card-featured strong::before { color: var(--accent); text-decoration: none !important; text-underline-offset: 0; text-decoration-thickness: 0; transition: color .2s ease, opacity .2s ease; }
+.project-card-featured:hover strong,
+.project-card-featured:hover strong::before,
+.project-card-featured:focus-visible strong,
+.project-card-featured:focus-visible strong::before { color: #7be3e8; text-decoration: none !important; }
+
+.personal-project-links a,
+.qa-lab-footer a,
+.text-link,
+.contact-links a { transition: color .2s ease, opacity .2s ease; }
+.personal-project-links a:hover,
+.qa-lab-footer a:hover,
+.text-link:hover { color: var(--accent-dark); opacity: .78; }
+
+/* Personal AP wordmark */
+.brand { display: inline-flex; align-items: center; gap: 11px; color: var(--text); text-decoration: none !important; transition: color .2s ease, opacity .2s ease; }
+.brand::before { content: ""; width: 34px; height: 34px; flex: 0 0 34px; background-color: currentColor; -webkit-mask: url("../assets/ap-mark.svg") center / contain no-repeat; mask: url("../assets/ap-mark.svg") center / contain no-repeat; transition: background-color .2s ease; }
+.brand:hover,
+.brand:focus-visible { color: var(--accent-dark); text-decoration: none !important; }
+
+@media (max-width: 900px) {
+  .nav-menu { position: fixed; top: 76px; left: 0; right: 0; bottom: 0; width: 100%; min-height: calc(100dvh - 76px); padding: 24px 16px calc(28px + env(safe-area-inset-bottom)); flex-direction: column; align-items: stretch; gap: 0; background: var(--bg); border: 0; border-radius: 0; box-shadow: none; overflow-y: auto; overscroll-behavior: contain; touch-action: pan-y; }
+  .nav-menu a { padding: 17px 0; border-bottom: 1px solid var(--line); font-family: "Space Grotesk", sans-serif; font-size: 1.05rem; font-weight: 600; }
+  .nav-menu .nav-cv { margin-top: 24px; padding: 14px 18px; border: 1px solid var(--text); border-radius: 999px; text-align: center; font-size: 0 !important; }
+  .nav-menu .nav-cv::before { font-size: .9rem !important; }
+}
+
+@media (max-width: 620px) {
+  .brand { gap: 9px; }
+  .brand::before { width: 30px; height: 30px; flex-basis: 30px; }
+  .button-secondary { width: 180px !important; min-width: 0 !important; max-width: 180px !important; flex: 0 1 180px; }
+  .project-card > span { padding-right: 0 !important; }
+}
