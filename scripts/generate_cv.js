@@ -203,15 +203,33 @@ const cvHtml = `<!DOCTYPE html>
       color: #7b8e8b;
       margin-bottom: 2px;
     }
+    .proj-item {
+      margin-bottom: 6px;
+      page-break-inside: avoid;
+    }
+    .proj-item:last-child {
+      margin-bottom: 0;
+    }
+    .proj-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
     .proj-title {
       font-weight: 700;
       color: #121a19;
+      font-size: 8.8pt;
+    }
+    .proj-meta {
+      font-size: 7.8pt;
+      color: #0c777d;
+      font-weight: 600;
     }
     .proj-desc {
       font-size: 8.3pt;
       color: #495957;
       line-height: 1.35;
-      margin-top: 2px;
+      margin-top: 1px;
     }
   </style>
 </head>
@@ -406,38 +424,55 @@ const cvHtml = `<!DOCTYPE html>
     </div>
   </section>
 
-  <!-- EDUCATION & PROJECTS -->
+  <!-- FEATURED QA PROJECTS -->
   <section class="section">
-    <div class="section-title">Education & Featured QA Projects</div>
-    <div class="grid-2col">
-      <!-- Education -->
-      <div>
-        <div class="edu-item" style="margin-bottom: 8px;">
-          <div class="edu-degree">Bachelor of Computer Systems (S.Kom.)</div>
-          <div class="edu-school">ITB STIKOM Bali</div>
-          <div class="edu-year">Computer Systems, Hardware, Architecture & Software</div>
+    <div class="section-title">Featured QA Projects</div>
+    <div class="projects-list">
+      <div class="proj-item">
+        <div class="proj-header">
+          <span class="proj-title">StarWALLET — E2E Testing with Cypress</span>
+          <span class="proj-meta">Cypress · JavaScript · Fintech QA</span>
         </div>
-        <div class="edu-item">
-          <div class="edu-degree">Computer Network Engineering (TKJ)</div>
-          <div class="edu-school">SMK Negeri 1 Denpasar</div>
-          <div class="edu-year">Networking, Protocols & System Infrastructure</div>
-        </div>
+        <p class="proj-desc">
+          Automated end-to-end regression testing for digital wallet ecosystem; validated authentication, balance transfers, transaction security, and third-party payment gateway callbacks.
+        </p>
       </div>
 
-      <!-- Featured Projects -->
-      <div>
-        <div class="proj-item" style="margin-bottom: 8px;">
-          <div class="proj-title">E2E Regression Test Lab (Playwright)</div>
-          <div class="proj-desc">
-            Automated regression suite validating viewport responsiveness, DOM integrity, dynamic API status polling, and simulated test runs on CI/CD.
-          </div>
+      <div class="proj-item">
+        <div class="proj-header">
+          <span class="proj-title">BIV Booking Website — E2E Testing with Playwright</span>
+          <span class="proj-meta">Playwright · TypeScript · Web Automation</span>
         </div>
-        <div class="proj-item">
-          <div class="proj-title">Aplikasi Bengkel (Laravel / PHP)</div>
-          <div class="proj-desc">
-            Automotive workshop management and POS system covering inventory management, service records, spare parts tracking, and financial reporting.
-          </div>
+        <p class="proj-desc">
+          Built test automation suite validating real-time room availability, calendar date-pickers, pricing engine calculations, multi-step checkout flows, and cross-browser responsiveness.
+        </p>
+      </div>
+
+      <div class="proj-item">
+        <div class="proj-header">
+          <span class="proj-title">StarPOINT POS — Mobile Testing with Appium</span>
+          <span class="proj-meta">Appium · Android &amp; iOS · POS Ecosystem</span>
         </div>
+        <p class="proj-desc">
+          Engineered automated mobile test suites for point-of-sale terminal apps; verified order creation, customer loyalty point redemptions, offline transaction caching, and receipt printer integrations.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section">
+    <div class="section-title">Education &amp; Academic Background</div>
+    <div class="grid-2col">
+      <div class="edu-item">
+        <div class="edu-degree">Bachelor of Computer Systems (S.Kom.)</div>
+        <div class="edu-school">ITB STIKOM Bali</div>
+        <div class="edu-year">Computer Systems, Hardware, Architecture &amp; Software Engineering</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree">Computer Network Engineering (TKJ)</div>
+        <div class="edu-school">SMK Negeri 1 Denpasar</div>
+        <div class="edu-year">Computer Networking, Protocols &amp; System Infrastructure</div>
       </div>
     </div>
   </section>

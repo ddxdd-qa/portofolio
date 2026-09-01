@@ -88,13 +88,13 @@ test.describe('Current homepage sections', () => {
     for (const href of expectedDestinations) await expect(page.locator(`#work .project-card[href="${href}"]`)).toHaveCount(1);
   });
 
-  test('personal projects section contains two external project links', async ({ page }) => {
+  test('personal projects section contains project cards with external links', async ({ page }) => {
     const section = page.locator('#personal-projects');
     await expect(section).toBeVisible();
-    await expect(section.locator('.personal-project-card')).toHaveCount(2);
+    await expect(section.locator('.personal-project-card')).toHaveCount(5);
     const links = section.locator('a[target="_blank"]');
-    await expect(links).toHaveCount(2);
-    for (let i = 0; i < 2; i++) await expect(links.nth(i)).toHaveAttribute('rel', /noopener/);
+    await expect(links).toHaveCount(5);
+    for (let i = 0; i < 5; i++) await expect(links.nth(i)).toHaveAttribute('rel', /noopener/);
   });
 
   test('education section contains three education cards and the learning strip', async ({ page }) => {
