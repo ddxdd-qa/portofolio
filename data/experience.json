@@ -1,22 +1,68 @@
 [
   {
-    "period": "2021 — NOW",
-    "company": "StarWORKS Global · StarLABS",
-    "role": "QA Tester",
-    "focus": "ECOSYSTEM QUALITY ASSURANCE",
-    "location": "Bali, Indonesia · Full-time",
-    "description": "Execute manual and automated testing for web and mobile platforms across the StarWORKS ecosystem, including StarWALLET, StarPoint loyalty, Booking Engine, affiliate systems, OTP & Liveness verification, and Payment Gateways. Create test cases in Qase/GitLab and collaborate closely with developers to resolve issues before deployment.",
-    "skills": ["Katalon Studio", "Playwright", "Postman", "REST API", "Qase", "GitLab", "SQL", "Mobile Testing", "Fintech/Web3"],
+    "period": "Sep 2024 — Present",
+    "company": "Starworks Global Pte Ltd",
+    "role": "Senior Quality Assurance Tester",
+    "focus": "SENIOR QA & TEST STRATEGY",
+    "location": "Badung Regency, Bali, Indonesia · On-site",
+    "type": "Full-time",
+    "description": "Leading end-to-end quality assurance, test architecture, and regression suites across web and mobile platforms in the StarWORKS ecosystem. Directing automated testing strategies, continuous integration workflows, and release readiness.",
+    "skills": ["JavaScript", "TypeScript", "Playwright", "Katalon Studio", "E2E Testing", "Test Architecture"],
     "linkedInUrl": "https://www.linkedin.com/in/dedy-blinda/"
   },
   {
-    "period": "2018 — 2021",
-    "company": "IT Infrastructure & Systems",
-    "role": "Head of IT Support & Web Development",
-    "focus": "SYSTEM OPERATIONS",
-    "location": "Bali, Indonesia · Full-time",
-    "description": "Managed organizational IT infrastructure, database maintenance, user support, and web application development, establishing structured processes for troubleshooting and software rollout.",
-    "skills": ["IT Support", "Web Development", "PHP", "MySQL", "Network Architecture", "System Administration"],
+    "period": "Sep 2021 — Sep 2024",
+    "company": "Starworks Global Pte Ltd",
+    "role": "QA Tester",
+    "focus": "ECOSYSTEM QUALITY ASSURANCE",
+    "location": "Badung, Bali, Indonesia · On-site",
+    "type": "Full-time",
+    "description": "Review and analyze system specifications across the StarWORKS ecosystem (StarWALLET, StarPoint loyalty, Booking Engine, affiliate systems, OTP & Liveness, and Payment Gateways). Execute comprehensive manual and automated test cases, report defects, and analyze test results.",
+    "skills": ["Manual Testing", "Test Automation", "Qase", "Postman", "REST API", "GitLab", "SQL"],
+    "linkedInUrl": "https://www.linkedin.com/in/dedy-blinda/"
+  },
+  {
+    "period": "Jan 2020 — Sep 2021",
+    "company": "PT SEMANGAT DIGITAL INDONESIA",
+    "role": "Full Stack Engineer",
+    "focus": "WEB & API ENGINEERING",
+    "location": "Bali, Indonesia",
+    "type": "Contract",
+    "description": "Developed dynamic web applications, architected database schemas, and built robust back-end APIs and responsive front-end interfaces.",
+    "skills": ["CodeIgniter", "TypeScript", "PHP", "MySQL", "JavaScript", "REST APIs"],
+    "linkedInUrl": "https://www.linkedin.com/in/dedy-blinda/"
+  },
+  {
+    "period": "Oct 2018 — Jan 2020",
+    "company": "PT Dimata Sora Jayate",
+    "role": "Information Technology Supervisor",
+    "focus": "IT LEADERSHIP & OPERATIONS",
+    "location": "Denpasar, Bali, Indonesia",
+    "type": "Full-time",
+    "description": "Supervised IT operations, system reliability, infrastructure deployments, and supported enterprise software solutions across multi-site client deployments.",
+    "skills": ["IT Management", "Infrastructure", "Systems Architecture", "Team Leadership"],
+    "linkedInUrl": "https://www.linkedin.com/in/dedy-blinda/"
+  },
+  {
+    "period": "Feb 2015 — Oct 2018",
+    "company": "PT Dimata Sora Jayate",
+    "role": "Java Software Engineer",
+    "focus": "ENTERPRISE SOFTWARE DEVELOPMENT",
+    "location": "Denpasar, Bali, Indonesia",
+    "type": "Full-time",
+    "description": "Designed and maintained enterprise web applications and business logic modules using Java and JavaServer Pages (JSP), integrating with relational databases.",
+    "skills": ["Java", "JavaServer Pages (JSP)", "SQL", "Database Design", "OOP"],
+    "linkedInUrl": "https://www.linkedin.com/in/dedy-blinda/"
+  },
+  {
+    "period": "Nov 2013 — Jan 2015",
+    "company": "PT Dimata Sora Jayate",
+    "role": "IT Support Technician",
+    "focus": "SYSTEM & NETWORK OPERATIONS",
+    "location": "Denpasar, Bali, Indonesia",
+    "type": "Full-time",
+    "description": "Networking analysis, technical training, hardware & software troubleshooting, Linux system administration, electrical engineering maintenance, and general affairs.",
+    "skills": ["Network Analysis", "Linux Administration", "Hardware Troubleshooting", "Technical Training"],
     "linkedInUrl": "https://www.linkedin.com/in/dedy-blinda/"
   }
 ]

@@ -76,9 +76,9 @@ test.describe('Current homepage sections', () => {
     const section = page.locator('#experience');
     const items = section.locator('.timeline-item');
     const count = await items.count();
-    expect(count).toBeGreaterThanOrEqual(2);
+    expect(count).toBe(6);
     await expect(section.locator('.timeline-role span')).toHaveCount(count);
-    await expect(items.first()).toContainText('StarWORKS');
+    await expect(items.first()).toContainText(/Starworks/i);
   });
 
   test('selected work contains three case study cards with valid destinations', async ({ page }) => {

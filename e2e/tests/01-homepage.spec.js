@@ -33,7 +33,7 @@ test.describe('Homepage smoke test', () => {
   });
 
   test('quick intro shows the years of experience', async ({ page }) => {
-    await expect(page.locator('.quick-number')).toHaveText('4+');
+    await expect(page.locator('.quick-number')).toHaveText('12+');
   });
 
   test('footer and signature are present', async ({ page }) => {
