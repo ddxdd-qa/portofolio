@@ -356,3 +356,40 @@ document.querySelectorAll('[data-slider]').forEach(slider => {
     row.append(toggle, panel);
   });
 })();
+
+/* DYNAMIC EXPERIENCE DATA INTEGRATION (DATA-DRIVEN FROM data/experience.json) */
+(() => {
+  const timelineContainer = document.querySelector('.timeline');
+  if (!timelineContainer) return;
+
+  fetch('data/experience.json')
+    .then(res => {
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res.json();
+    })
+    .then(data => {
+      if (!Array.isArray(data) || data.length === 0) return;
+
+      timelineContainer.innerHTML = data.map(item => `
+        <article class="timeline-item">
+          <div class="timeline-year">${item.period}</div>
+          <div class="timeline-dot"></div>
+          <div>
+            <h3>${item.company}</h3>
+            <p class="timeline-role">${item.role}<span>${item.focus}</span></p>
+            <p>${item.description}</p>
+            ${item.skills ? `
+              <div class="experience-skills" style="display:flex; flex-wrap:wrap; gap:6px; margin:14px 0 10px;">
+                ${item.skills.map(s => `<span style="font-size:0.75rem; padding:3px 9px; border-radius:999px; background:rgba(66,199,206,0.12); color:var(--accent-dark); font-weight:600;">${s}</span>`).join('')}
+              </div>
+            ` : ''}
+            <a class="text-link" href="${item.linkedInUrl || 'https://www.linkedin.com/in/dedy-blinda/'}" target="_blank" rel="noopener" style="display:inline-block; margin-top: 8px;">View on LinkedIn ↗</a>
+          </div>
+        </article>
+      `).join('');
+    })
+    .catch(() => {
+      // Fall back silently to static markup in index.html
+    });
+})();
+

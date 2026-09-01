@@ -1,0 +1,22 @@
+[
+  {
+    "period": "2021 — NOW",
+    "company": "StarWORKS Global · StarLABS",
+    "role": "QA Tester",
+    "focus": "ECOSYSTEM QUALITY ASSURANCE",
+    "location": "Bali, Indonesia · Full-time",
+    "description": "Execute manual and automated testing for web and mobile platforms across the StarWORKS ecosystem, including StarWALLET, StarPoint loyalty, Booking Engine, affiliate systems, OTP & Liveness verification, and Payment Gateways. Create test cases in Qase/GitLab and collaborate closely with developers to resolve issues before deployment.",
+    "skills": ["Katalon Studio", "Playwright", "Postman", "REST API", "Qase", "GitLab", "SQL", "Mobile Testing", "Fintech/Web3"],
+    "linkedInUrl": "https://www.linkedin.com/in/dedy-blinda/"
+  },
+  {
+    "period": "2018 — 2021",
+    "company": "IT Infrastructure & Systems",
+    "role": "Head of IT Support & Web Development",
+    "focus": "SYSTEM OPERATIONS",
+    "location": "Bali, Indonesia · Full-time",
+    "description": "Managed organizational IT infrastructure, database maintenance, user support, and web application development, establishing structured processes for troubleshooting and software rollout.",
+    "skills": ["IT Support", "Web Development", "PHP", "MySQL", "Network Architecture", "System Administration"],
+    "linkedInUrl": "https://www.linkedin.com/in/dedy-blinda/"
+  }
+]
