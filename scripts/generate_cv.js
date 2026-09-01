@@ -304,9 +304,14 @@ const cvHtml = `<!DOCTYPE html>
         Reviewed and analyzed software specifications across ecosystem products; executed detailed manual and automated test plans.
       </p>
       <ul class="exp-bullets">
-        <li>Created, maintained, and executed 500+ structured test cases in Qase.io and GitLab across web and native mobile apps.</li>
-        <li>Validated critical business flows including payment gateway integrations, affiliate modules, token transfers, and OTP/Liveness checks.</li>
-        <li>Performed systematic API verification using Postman, inspecting status codes, payloads, error responses, and database record integrity.</li>
+        <li>Review and analyze system specifications across web and mobile platforms.</li>
+        <li>Execute test cases (manual or automated) and analyze results.</li>
+        <li>Evaluate product code according to specifications.</li>
+        <li>Create logs to document testing phases and defects.</li>
+        <li>Report bugs and errors to development teams.</li>
+        <li>Conduct post-release/post-implementation testing.</li>
+        <li>Reviews test procedures and develops test scripts.</li>
+        <li>Work with cross-functional teams to ensure quality throughout the software development lifecycle.</li>
       </ul>
       <div class="exp-skills">
         <span class="skill-tag">Manual Testing</span>

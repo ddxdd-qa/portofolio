@@ -17,7 +17,17 @@
     "focus": "ECOSYSTEM QUALITY ASSURANCE",
     "location": "Badung, Bali, Indonesia · On-site",
     "type": "Full-time",
-    "description": "Review and analyze system specifications across the StarWORKS ecosystem (StarWALLET, StarPoint loyalty, Booking Engine, affiliate systems, OTP & Liveness, and Payment Gateways). Execute comprehensive manual and automated test cases, report defects, and analyze test results.",
+    "description": "Executed full lifecycle quality assurance across web and mobile platforms in the StarWORKS ecosystem.",
+    "responsibilities": [
+      "Review and analyze system specifications.",
+      "Execute test cases (manual or automated) and analyze results.",
+      "Evaluate product code according to specifications.",
+      "Create logs to document testing phases and defects.",
+      "Report bugs and errors to development teams.",
+      "Conduct post-release/post-implementation testing.",
+      "Reviews test procedures and develops test scripts.",
+      "Work with cross-functional teams to ensure quality throughout the software development lifecycle."
+    ],
     "skills": ["Manual Testing", "Test Automation", "Qase", "Postman", "REST API", "GitLab", "SQL"],
     "linkedInUrl": "https://www.linkedin.com/in/dedy-blinda/"
   },

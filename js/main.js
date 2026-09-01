@@ -378,6 +378,11 @@ document.querySelectorAll('[data-slider]').forEach(slider => {
             <h3>${item.company}</h3>
             <p class="timeline-role">${item.role}<span>${item.focus}</span></p>
             <p>${item.description}</p>
+            ${item.responsibilities ? `
+              <ul style="margin: 8px 0 12px 18px; color: var(--muted); font-size: 0.92rem; line-height: 1.6;">
+                ${item.responsibilities.map(r => `<li>${r}</li>`).join('')}
+              </ul>
+            ` : ''}
             ${item.skills ? `
               <div class="experience-skills" style="display:flex; flex-wrap:wrap; gap:6px; margin:14px 0 10px;">
                 ${item.skills.map(s => `<span style="font-size:0.75rem; padding:3px 9px; border-radius:999px; background:rgba(66,199,206,0.12); color:var(--accent-dark); font-weight:600;">${s}</span>`).join('')}
