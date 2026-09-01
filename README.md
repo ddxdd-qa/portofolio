@@ -1,6 +1,6 @@
-# Dedy Blinda — QA Engineer & Tester Portfolio
+# Dedy Blinda Rosandy — QA Engineer & Tester Portfolio
 
-Personal portfolio website for **Dedy Blinda**, QA Tester / Quality Assurance Engineer.
+Personal portfolio website for **Dedy Blinda Rosandy**, QA Tester / Quality Assurance Engineer.
 
 ## Overview
 
