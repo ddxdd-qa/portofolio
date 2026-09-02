@@ -2,6 +2,12 @@ const fs = require('fs');
 const path = require('path');
 const { chromium } = require('../e2e/node_modules/playwright');
 
+const photoOptimized = path.resolve(__dirname, '../assets/dedy-blinda-cv.jpg');
+const photoRaw = path.resolve(__dirname, '../assets/dedy-blinda.jpg');
+const photoPath = fs.existsSync(photoOptimized) ? photoOptimized : photoRaw;
+const photoBase64 = fs.readFileSync(photoPath).toString('base64');
+const photoDataUrl = `data:image/jpeg;base64,${photoBase64}`;
+
 const cvHtml = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +16,7 @@ const cvHtml = `<!DOCTYPE html>
   <style>
     @page {
       size: A4;
-      margin: 14mm 16mm;
+      margin: 12mm 15mm;
     }
     *, *::before, *::after {
       box-sizing: border-box;
@@ -33,21 +39,35 @@ const cvHtml = `<!DOCTYPE html>
     .header {
       border-bottom: 2px solid #1a2524;
       padding-bottom: 12px;
-      margin-bottom: 14px;
+      margin-bottom: 13px;
       display: flex;
       justify-content: space-between;
-      align-items: flex-end;
+      align-items: center;
+    }
+    .header-profile {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .header-photo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #0c777d;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+      flex-shrink: 0;
     }
     .header-left h1 {
-      font-size: 20pt;
+      font-size: 19pt;
       font-weight: 800;
       letter-spacing: -0.02em;
       color: #121a19;
       text-transform: uppercase;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
     .header-left h2 {
-      font-size: 11pt;
+      font-size: 10.5pt;
       font-weight: 700;
       color: #0c777d;
       letter-spacing: 0.05em;
@@ -237,12 +257,14 @@ const cvHtml = `<!DOCTYPE html>
 
   <!-- HEADER -->
   <header class="header">
-    <div class="header-left">
-      <h1>Dedy Blinda Rosandy</h1>
-      <h2>Senior Quality Assurance Tester · QA Engineer</h2>
+    <div class="header-profile">
+      <img src="${photoDataUrl}" alt="Dedy Blinda Rosandy" class="header-photo">
+      <div class="header-left">
+        <h1>Dedy Blinda Rosandy</h1>
+        <h2>Senior Quality Assurance Tester · QA Engineer</h2>
+      </div>
     </div>
     <div class="header-right">
-      <span>📍 Badung Regency, Bali, Indonesia</span>
       <span>✉️ <a href="mailto:dedy.blinda94@gmail.com">dedy.blinda94@gmail.com</a></span>
       <span>🔗 <a href="https://www.linkedin.com/in/dedy-blinda/">linkedin.com/in/dedy-blinda</a></span>
       <span>🐙 <a href="https://github.com/ddxdd-qa">github.com/ddxdd-qa</a></span>
@@ -487,9 +509,9 @@ const cvHtml = `<!DOCTYPE html>
 
   const browser = await chromium.launch();
   const page = await browser.newPage();
-  
+
   await page.setContent(cvHtml, { waitUntil: 'networkidle' });
-  
+
   await page.pdf({
     path: outputPath,
     format: 'A4',
