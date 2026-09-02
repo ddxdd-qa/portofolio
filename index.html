@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/accessibility.css">
   <link rel="stylesheet" href="css/content-editor.css">
+  <link rel="stylesheet" href="css/qa-artifacts.css">
   <style>
     @media (max-width: 620px) {
       .hero-visual { min-width: 0; }
@@ -233,6 +234,279 @@
             <a href="https://github.com/ddxdd-qa/portofolio/tree/main/e2e" target="_blank" rel="noopener">View Playwright suite on GitHub ↗</a>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- QA Artifacts: Sample Test Cases & Defect Reports -->
+    <section class="section container" id="qa-artifacts">
+      <div class="section-heading">
+        <div class="section-index">05</div>
+        <div>
+          <p class="eyebrow">QA ARTIFACTS &amp; DOCUMENTATION</p>
+          <h2>Sample Test Case &amp; Bug Report.</h2>
+          <p class="section-lead">Real-world examples demonstrating how I design structured test matrices, validate complex edge cases, and report production-blocking defects with clarity.</p>
+        </div>
+      </div>
+
+      <div class="qa-artifacts-container">
+        <!-- Tab Navigation -->
+        <div class="qa-artifacts-nav" role="tablist">
+          <button type="button" class="qa-artifact-tab active" data-target="tab-testcase" role="tab" aria-selected="true">
+            <span>📋 Sample Test Case</span>
+            <span class="qa-artifact-tab-badge">TC-SW-042</span>
+          </button>
+          <button type="button" class="qa-artifact-tab" data-target="tab-bugreport" role="tab" aria-selected="false">
+            <span>🐞 Sample Bug Report</span>
+            <span class="qa-artifact-tab-badge">BUG-SW-189</span>
+          </button>
+          <button type="button" class="qa-artifact-tab" data-target="tab-pos-testcase" role="tab" aria-selected="false">
+            <span>📱 POS Mobile Test Case</span>
+            <span class="qa-artifact-tab-badge">TC-POS-019</span>
+          </button>
+        </div>
+
+        <!-- Panel 1: Sample Test Case -->
+        <div class="qa-artifact-panel active" id="tab-testcase" role="tabpanel">
+          <div class="qa-artifact-header">
+            <div>
+              <div class="qa-artifact-id">Test Case ID: TC-SW-042 · StarWALLET Core</div>
+              <h3 class="qa-artifact-title">Multi-Currency Fund Transfer with OTP &amp; Biometric Liveness Challenge</h3>
+            </div>
+            <div class="qa-artifact-meta-badges">
+              <span class="badge-tag badge-critical">Severity: Critical</span>
+              <span class="badge-tag badge-p0">Priority: P0 Blocker</span>
+              <span class="badge-tag badge-verified">Status: Automated &amp; Passed</span>
+              <span class="badge-tag badge-tech">Cypress &amp; Playwright</span>
+            </div>
+          </div>
+
+          <div class="qa-artifact-grid">
+            <div>
+              <div class="qa-field-label">Target Module</div>
+              <div class="qa-field-value">Fintech Wallet / Peer-to-Peer Transfers</div>
+            </div>
+            <div>
+              <div class="qa-field-label">Test Environment</div>
+              <div class="qa-field-value">Staging v2.4.1 (Android 14, iOS 17.4, Chrome)</div>
+            </div>
+            <div>
+              <div class="qa-field-label">Pre-conditions</div>
+              <div class="qa-field-value">User KYC Level 2, Balance &ge; IDR 1.5M, Valid 2FA device</div>
+            </div>
+            <div>
+              <div class="qa-field-label">Execution Type</div>
+              <div class="qa-field-value">End-to-End Automated &amp; Manual Verification</div>
+            </div>
+          </div>
+
+          <div class="qa-steps-table-wrapper">
+            <table class="qa-steps-table">
+              <thead>
+                <tr>
+                  <th style="width: 55px;">#</th>
+                  <th>Action / Step</th>
+                  <th>Test Input Data</th>
+                  <th>Expected Result</th>
+                  <th style="width: 80px;">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>1</strong></td>
+                  <td>Open StarWALLET, select <strong>Transfer</strong> &rarr; <strong>Send to Contact</strong>.</td>
+                  <td>Recipient: <code>+6281234567890</code></td>
+                  <td>Real-time debounce lookup validates recipient profile, displaying verified KYC badge.</td>
+                  <td><span class="badge-tag badge-verified">Pass</span></td>
+                </tr>
+                <tr>
+                  <td><strong>2</strong></td>
+                  <td>Enter transfer amount and transaction note.</td>
+                  <td>Amount: <code>IDR 250,000</code><br>Note: <code>"Catering Invoice"</code></td>
+                  <td>Amount formatted with thousand separators; service fee calculated and displayed (Rp 0 - Promo).</td>
+                  <td><span class="badge-tag badge-verified">Pass</span></td>
+                </tr>
+                <tr>
+                  <td><strong>3</strong></td>
+                  <td>Tap <strong>Continue</strong> to review confirmation modal.</td>
+                  <td>N/A</td>
+                  <td>Summary modal displays sender, recipient, fee, total deduction, and unique Ref ID.</td>
+                  <td><span class="badge-tag badge-verified">Pass</span></td>
+                </tr>
+                <tr>
+                  <td><strong>4</strong></td>
+                  <td>Tap <strong>Confirm &amp; Pay</strong> to initiate security challenge.</td>
+                  <td>N/A</td>
+                  <td>6-digit dynamic OTP dispatched; 60-second countdown timer initiates.</td>
+                  <td><span class="badge-tag badge-verified">Pass</span></td>
+                </tr>
+                <tr>
+                  <td><strong>5</strong></td>
+                  <td>Enter valid dynamic OTP code and submit.</td>
+                  <td>OTP: <code>729401</code></td>
+                  <td>Button disables to prevent double-clicks; spinner displays during API handshake.</td>
+                  <td><span class="badge-tag badge-verified">Pass</span></td>
+                </tr>
+                <tr>
+                  <td><strong>6</strong></td>
+                  <td>Verify transaction receipt and ledger database update.</td>
+                  <td>DB: <code>wallet_transactions</code></td>
+                  <td>Sender balance debited IDR 250K, recipient credited IDR 250K; DB status = <code>COMPLETED</code>.</td>
+                  <td><span class="badge-tag badge-verified">Pass</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="qa-artifact-actions">
+            <a class="qa-artifact-btn" href="docs/SAMPLE_TEST_CASE.md" target="_blank" rel="noopener">📄 View Full Test Case Markdown ↗</a>
+          </div>
+        </div>
+
+        <!-- Panel 2: Sample Bug Report -->
+        <div class="qa-artifact-panel" id="tab-bugreport" role="tabpanel">
+          <div class="qa-artifact-header">
+            <div>
+              <div class="qa-artifact-id">Bug ID: BUG-SW-189 · Jira / GitLab Defect</div>
+              <h3 class="qa-artifact-title">Race Condition on Concurrent "Double-Tap" Transfer Button Leads to Duplicate Deduction</h3>
+            </div>
+            <div class="qa-artifact-meta-badges">
+              <span class="badge-tag badge-critical">Severity: S1 Critical</span>
+              <span class="badge-tag badge-p0">Priority: P1 High</span>
+              <span class="badge-tag badge-tech">Component: Wallet API / Mobile</span>
+              <span class="badge-tag badge-verified">Resolution: Verified in Staging</span>
+            </div>
+          </div>
+
+          <div class="qa-artifact-grid">
+            <div>
+              <div class="qa-field-label">Environment</div>
+              <div class="qa-field-value">Staging v2.4.1 · Android Build #2026.08.30</div>
+            </div>
+            <div>
+              <div class="qa-field-label">Network Profile</div>
+              <div class="qa-field-value">Throttled 3G (350ms RTT latency)</div>
+            </div>
+            <div>
+              <div class="qa-field-label">Reporter</div>
+              <div class="qa-field-value">Dedy Blinda Rosandy (Senior QA Tester)</div>
+            </div>
+            <div>
+              <div class="qa-field-label">Risk Impact</div>
+              <div class="qa-field-value">Double spend / Financial Ledger discrepancy</div>
+            </div>
+          </div>
+
+          <div style="margin: 16px 0;">
+            <h4 style="color: #fff; margin-bottom: 8px;">Steps to Reproduce:</h4>
+            <ol style="padding-left: 20px; color: #d8e5e3; line-height: 1.6; font-size: 0.9rem;">
+              <li>Log into StarWALLET account with balance <code>IDR 500,000</code>.</li>
+              <li>Configure network proxy to simulate slow 3G latency (350ms).</li>
+              <li>Initiate a transfer of <code>IDR 100,000</code> to contact <code>USR-39211</code>.</li>
+              <li>On the confirmation sheet, rapidly <strong>double-tap</strong> the "Confirm &amp; Pay" button within ~180ms.</li>
+              <li>Inspect wallet balance and transaction ledger records.</li>
+            </ol>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin: 18px 0;">
+            <div style="background: rgba(239, 83, 80, 0.08); border: 1px solid rgba(239, 83, 80, 0.25); border-radius: 12px; padding: 14px 18px;">
+              <strong style="color: #ef5350; font-size: 0.85rem; text-transform: uppercase;">Actual Behavior (Defect):</strong>
+              <p style="color: #d8e5e3; font-size: 0.86rem; margin-top: 6px; line-height: 1.5;">Two parallel HTTP POST requests fired to <code>/api/v1/wallet/transfer</code>. Both requests returned <code>200 OK</code>. Sender was charged <strong>IDR 200,000</strong> instead of IDR 100,000.</p>
+            </div>
+            <div style="background: rgba(102, 187, 106, 0.08); border: 1px solid rgba(102, 187, 106, 0.25); border-radius: 12px; padding: 14px 18px;">
+              <strong style="color: #66bb6a; font-size: 0.85rem; text-transform: uppercase;">Expected Behavior:</strong>
+              <p style="color: #d8e5e3; font-size: 0.86rem; margin-top: 6px; line-height: 1.5;">Client-side debounce must prevent multiple clicks. Server-side idempotency key (<code>X-Idempotency-Key</code>) must reject duplicate calls with <code>409 Conflict</code>.</p>
+            </div>
+          </div>
+
+          <h4 style="color: #fff; margin: 16px 0 6px;">Server Proxy Evidence Log:</h4>
+          <div class="qa-code-box">POST /api/v1/wallet/transfer [200 OK] (TxID: TX-99014A) - 14:02:11.104
+POST /api/v1/wallet/transfer [200 OK] (TxID: TX-99014B) - 14:02:11.238
+WARN: Concurrent balance modification detected on wallet W-84920 without active Redis distributed lock.</div>
+
+          <div class="qa-artifact-actions">
+            <a class="qa-artifact-btn" href="docs/SAMPLE_BUG_REPORT.md" target="_blank" rel="noopener">🐞 View Full Bug Report Markdown ↗</a>
+          </div>
+        </div>
+
+        <!-- Panel 3: POS Mobile Test Case -->
+        <div class="qa-artifact-panel" id="tab-pos-testcase" role="tabpanel">
+          <div class="qa-artifact-header">
+            <div>
+              <div class="qa-artifact-id">Test Case ID: TC-POS-019 · StarPOINT POS Ecosystem</div>
+              <h3 class="qa-artifact-title">Offline Mode Transaction Caching &amp; Background Ledger Auto-Synchronization</h3>
+            </div>
+            <div class="qa-artifact-meta-badges">
+              <span class="badge-tag badge-critical">Severity: High</span>
+              <span class="badge-tag badge-p0">Priority: P1</span>
+              <span class="badge-tag badge-verified">Status: Automated &amp; Passed</span>
+              <span class="badge-tag badge-tech">Appium &amp; Android</span>
+            </div>
+          </div>
+
+          <div class="qa-artifact-grid">
+            <div>
+              <div class="qa-field-label">Target App</div>
+              <div class="qa-field-value">StarPOINT POS Mobile (Android Tablet / Sunmi POS)</div>
+            </div>
+            <div>
+              <div class="qa-field-label">Automation Engine</div>
+              <div class="qa-field-value">Appium 2.x + UIAutomator2 + TypeScript</div>
+            </div>
+            <div>
+              <div class="qa-field-label">Local Storage</div>
+              <div class="qa-field-value">SQLite Encrypted Local Queue</div>
+            </div>
+            <div>
+              <div class="qa-field-label">Verification Target</div>
+              <div class="qa-field-value">Zero data loss during internet outage at checkout</div>
+            </div>
+          </div>
+
+          <div class="qa-steps-table-wrapper">
+            <table class="qa-steps-table">
+              <thead>
+                <tr>
+                  <th style="width: 55px;">#</th>
+                  <th>Action / Step</th>
+                  <th>Test Input Data</th>
+                  <th>Expected Result</th>
+                  <th style="width: 80px;">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>1</strong></td>
+                  <td>Add 3 items to POS cart, then disconnect device WiFi (simulate store internet outage).</td>
+                  <td>Cart items: 3 units<br>Network: Offline</td>
+                  <td>App status pill changes to <code>OFFLINE MODE (Cached)</code>; receipt builder remains responsive.</td>
+                  <td><span class="badge-tag badge-verified">Pass</span></td>
+                </tr>
+                <tr>
+                  <td><strong>2</strong></td>
+                  <td>Complete order payment using Cash and loyalty point discount.</td>
+                  <td>Cash: <code>IDR 150,000</code><br>Points: <code>5,000 pts</code></td>
+                  <td>Transaction successfully saved into encrypted local SQLite queue; offline receipt prints.</td>
+                  <td><span class="badge-tag badge-verified">Pass</span></td>
+                </tr>
+                <tr>
+                  <td><strong>3</strong></td>
+                  <td>Reconnect WiFi connection and monitor sync engine.</td>
+                  <td>Network: Online</td>
+                  <td>Sync background worker initiates within 5s; dispatches batched orders to central server.</td>
+                  <td><span class="badge-tag badge-verified">Pass</span></td>
+                </tr>
+                <tr>
+                  <td><strong>4</strong></td>
+                  <td>Inspect cloud database for duplicate or skipped orders.</td>
+                  <td>Server: <code>pos_orders</code></td>
+                  <td>All offline orders committed with original offline timestamp; points reconciled accurately.</td>
+                  <td><span class="badge-tag badge-verified">Pass</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -585,5 +859,6 @@
 
   <script src="js/main.js"></script>
   <script src="js/content-editor.js"></script>
+  <script src="js/qa-artifacts.js"></script>
 </body>
 </html>
