@@ -12,8 +12,8 @@
   <style>
     @media (max-width: 620px) {
       .hero-visual { min-width: 0; }
-      .portrait-frame { width: 76%; max-width: 100%; min-width: 0; overflow: hidden; }
-      .portrait-frame img { width: 100%; max-width: 100%; height: 100%; display: block; object-fit: cover; }
+      .portrait-frame { width: 76%; max-width: 100%; min-width: 0; overflow: hidden; aspect-ratio: 354 / 472; border-radius: 20px; }
+      .portrait-frame img { width: 100%; max-width: 100%; height: 100%; display: block; object-fit: contain; object-position: center bottom; }
     }
     .qa-lab-section { background: #eef3f1; }
     .qa-lab { background: var(--surface); border: 1px solid var(--line); border-radius: 28px; overflow: hidden; box-shadow: 0 18px 45px rgba(23,33,33,.08); }

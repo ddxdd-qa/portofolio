@@ -48,13 +48,13 @@ const cvHtml = `<!DOCTYPE html>
       gap: 15px;
     }
     .header-photo {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid #0c777d;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+      height: 74px;
+      width: auto;
+      max-width: 60px;
+      object-fit: contain;
+      object-position: bottom center;
       flex-shrink: 0;
+      filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.15));
     }
     .header-left h1 {
       font-size: 19pt;
