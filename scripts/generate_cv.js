@@ -2,11 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const { chromium } = require('../e2e/node_modules/playwright');
 
-const photoOptimized = path.resolve(__dirname, '../assets/dedy-blinda-cv.jpg');
-const photoRaw = path.resolve(__dirname, '../assets/dedy-blinda.jpg');
-const photoPath = fs.existsSync(photoOptimized) ? photoOptimized : photoRaw;
+const photoPath = path.resolve(__dirname, '../assets/dedy-blinda.png');
 const photoBase64 = fs.readFileSync(photoPath).toString('base64');
-const photoDataUrl = `data:image/jpeg;base64,${photoBase64}`;
+const photoDataUrl = `data:image/png;base64,${photoBase64}`;
 
 const cvHtml = `<!DOCTYPE html>
 <html lang="en">
