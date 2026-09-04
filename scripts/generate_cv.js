@@ -286,7 +286,7 @@ const cvHtml = `<!DOCTYPE html>
       <div class="skill-list">Manual Testing, Test Automation, Functional & Regression Testing, End-to-End (E2E), Integration Testing, System Testing, Black Box, User Acceptance Testing (UAT), Test Strategy, Test Plan Design.</div>
 
       <div class="skill-category">Automation & Tools:</div>
-      <div class="skill-list">Playwright, Cypress, Appium (Mobile Automation), Selenium WebDriver, Postman (API Testing), Qase.io, GitLab CI/CD, GitHub, Jira, Defect Reporting & Triage.</div>
+      <div class="skill-list">Playwright, Cypress, Appium (Mobile Automation), Selenium WebDriver, Postman (API Testing), Qase.io, GitLab CI/CD, GitHub, Defect Reporting & Triage.</div>
 
       <div class="skill-category">Languages & DB:</div>
       <div class="skill-list">JavaScript, TypeScript, PHP (CodeIgniter, Laravel), Java, JSP, SQL (MySQL, PostgreSQL), HTML5, CSS3, Shell / Linux.</div>
