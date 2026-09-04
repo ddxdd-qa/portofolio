@@ -26,7 +26,6 @@ a:not(.button):not(.project-card):not(.personal-project-card):not(.nav-cv):not(.
 .project-link,
 .contact-links a,
 .qa-lab-footer a,
-.personal-project-links a,
 .case-back,
 .case-closing .project-link { transition: color .2s ease, border-color .2s ease, opacity .2s ease; }
 
@@ -37,7 +36,6 @@ a:not(.button):not(.project-card):not(.personal-project-card):not(.nav-cv):not(.
 .text-link:hover,
 .project-link:hover,
 .qa-lab-footer a:hover,
-.personal-project-links a:hover,
 .case-back:hover,
 .case-closing .project-link:hover { color: var(--accent-dark); text-decoration: underline; text-underline-offset: .2em; }
 
@@ -91,19 +89,16 @@ body { max-width: 100%; overflow-x: hidden; overflow-x: clip; }
 
 .text-link,
 .qa-lab-footer a,
-.personal-project-links a,
 .contact-links a,
 .project-card-featured strong { font-size: 0; }
 
 .text-link::before,
 .qa-lab-footer a::before,
-.personal-project-links a::before,
 .contact-links a::before,
 .project-card-featured strong::before { display: inline-block; font-size: 1rem; line-height: inherit; color: inherit; }
 
 .text-link::before { content: "My professional journey"; text-decoration: underline; text-underline-offset: .2em; }
 .qa-lab-footer a::before { content: "View Playwright suite on GitHub"; }
-.personal-project-links a::before { content: "View live"; text-decoration: underline; text-underline-offset: .2em; }
 .project-card-featured strong::before { content: "View case study"; text-decoration: underline; text-underline-offset: .2em; }
 
 .contact-links a { border-bottom: 0; text-decoration: none; }
@@ -127,11 +122,9 @@ body { max-width: 100%; overflow-x: hidden; overflow-x: clip; }
 .project-card-featured:focus-visible strong,
 .project-card-featured:focus-visible strong::before { color: #7be3e8; text-decoration: none !important; }
 
-.personal-project-links a,
 .qa-lab-footer a,
 .text-link,
 .contact-links a { transition: color .2s ease, opacity .2s ease; }
-.personal-project-links a:hover,
 .qa-lab-footer a:hover,
 .text-link:hover { color: var(--accent-dark); opacity: .78; }
 

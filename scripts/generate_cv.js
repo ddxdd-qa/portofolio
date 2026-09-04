@@ -274,7 +274,7 @@ const cvHtml = `<!DOCTYPE html>
   <section class="section">
     <div class="section-title">Professional Summary</div>
     <p class="summary-text">
-      Detail-driven Senior Quality Assurance Tester & Software Engineer with <strong>12+ years</strong> of technology experience, including over <strong>5 years specializing in Software Quality Assurance and Test Automation</strong>. Proven track record across fintech ecosystems, mobile & web applications, payment gateways, booking engines, loyalty systems, and RESTful APIs. Expertise in developing comprehensive test cases, defect triaging, and automating regression suites using Playwright, Cypress, Appium, and Katalon Studio. Strong multidisciplinary background in full-stack web development and systems engineering ensures seamless root-cause analysis and productive pairing with developer squads.
+      Detail-driven Senior Quality Assurance Tester & Software Engineer with <strong>12+ years</strong> of technology experience, including over <strong>5 years specializing in Software Quality Assurance and Test Automation</strong>. Proven track record across fintech ecosystems, mobile & web applications, payment gateways, booking engines, loyalty systems, and RESTful APIs. Expertise in developing comprehensive test cases, defect triaging, and automating regression suites using Playwright, Cypress, and Appium. Strong multidisciplinary background in full-stack web development and systems engineering ensures seamless root-cause analysis and productive pairing with developer squads.
     </p>
   </section>
 
@@ -286,7 +286,7 @@ const cvHtml = `<!DOCTYPE html>
       <div class="skill-list">Manual Testing, Test Automation, Functional & Regression Testing, End-to-End (E2E), Integration Testing, System Testing, Black Box, User Acceptance Testing (UAT), Test Strategy, Test Plan Design.</div>
 
       <div class="skill-category">Automation & Tools:</div>
-      <div class="skill-list">Playwright, Cypress, Appium (Mobile Automation), Katalon Studio, Selenium WebDriver, Postman (API Testing), Qase.io, GitLab CI/CD, GitHub, Jira, Defect Reporting & Triage.</div>
+      <div class="skill-list">Playwright, Cypress, Appium (Mobile Automation), Selenium WebDriver, Postman (API Testing), Qase.io, GitLab CI/CD, GitHub, Jira, Defect Reporting & Triage.</div>
 
       <div class="skill-category">Languages & DB:</div>
       <div class="skill-list">JavaScript, TypeScript, PHP (CodeIgniter, Laravel), Java, JSP, SQL (MySQL, PostgreSQL), HTML5, CSS3, Shell / Linux.</div>
@@ -314,7 +314,7 @@ const cvHtml = `<!DOCTYPE html>
       </p>
       <ul class="exp-bullets">
         <li>Direct testing strategies, regression frameworks, and release readiness for multi-tier applications (StarWALLET, StarPoint loyalty, Booking Engine).</li>
-        <li>Implement automated test suites using Playwright, Cypress, Appium, and Katalon Studio, reducing repetitive manual testing overhead.</li>
+        <li>Implement automated test suites using Playwright, Cypress, and Appium, reducing repetitive manual testing overhead.</li>
         <li>Coordinate closely with software engineering, DevOps, and product management to streamline bug turnaround and sprint QA deliverables.</li>
       </ul>
       <div class="exp-skills">
@@ -323,7 +323,6 @@ const cvHtml = `<!DOCTYPE html>
         <span class="skill-tag">Playwright</span>
         <span class="skill-tag">Cypress</span>
         <span class="skill-tag">Appium</span>
-        <span class="skill-tag">Katalon Studio</span>
         <span class="skill-tag">E2E Automation</span>
         <span class="skill-tag">Test Architecture</span>
       </div>
