@@ -304,7 +304,7 @@ const cvHtml = `<!DOCTYPE html>
     <div class="exp-item">
       <div class="exp-header">
         <div>
-          <span class="exp-role">Senior Quality Assurance Tester</span> — <span class="exp-company">Starworks Global Pte Ltd</span>
+          <span class="exp-role">Senior Quality Assurance Tester</span> — <span class="exp-company">PT. Starworks Technologies Indonesia</span>
         </div>
         <div class="exp-period">Sep 2024 — Present</div>
       </div>
@@ -332,7 +332,7 @@ const cvHtml = `<!DOCTYPE html>
     <div class="exp-item">
       <div class="exp-header">
         <div>
-          <span class="exp-role">QA Tester</span> — <span class="exp-company">Starworks Global Pte Ltd</span>
+          <span class="exp-role">QA Tester</span> — <span class="exp-company">PT. Starworks Technologies Indonesia</span>
         </div>
         <div class="exp-period">Sep 2021 — Sep 2024</div>
       </div>

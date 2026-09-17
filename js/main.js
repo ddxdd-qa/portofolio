@@ -88,7 +88,7 @@ document.querySelectorAll('[data-slider]').forEach(slider => {
   }
 
   let rows = syncTestRows();
-  const API_BASE = window.QA_LAB_API_BASE || 'https://portfolio-psi-one-uitl02qr3a.vercel.app';
+  const API_BASE = window.QA_LAB_API_BASE || 'https://ddxdd-qa-lab-api.vercel.app';
   let pollTimer = null;
 
   if (metrics[0]) metrics[0].textContent = String(TOTAL_TESTS);
@@ -397,4 +397,3 @@ document.querySelectorAll('[data-slider]').forEach(slider => {
       // Fall back silently to static markup in index.html
     });
 })();
-

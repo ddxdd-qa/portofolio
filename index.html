@@ -263,6 +263,10 @@
             <span>📱 POS Mobile Test Case</span>
             <span class="qa-artifact-tab-badge">TC-POS-019</span>
           </button>
+          <button type="button" class="qa-artifact-tab" data-target="tab-booking-testcase" role="tab" aria-selected="false">
+            <span>🏨 Booking Availability Test Case</span>
+            <span class="qa-artifact-tab-badge">TC-BE-031</span>
+          </button>
         </div>
 
         <!-- Panel 1: Sample Test Case -->
@@ -507,6 +511,85 @@ WARN: Concurrent balance modification detected on wallet W-84920 without active 
           </div>
         </div>
 
+        <!-- Panel 4: Booking Availability Test Case -->
+        <div class="qa-artifact-panel" id="tab-booking-testcase" role="tabpanel">
+          <div class="qa-artifact-header">
+            <div>
+              <div class="qa-artifact-id">Test Case ID: TC-BE-031 · Booking Engine</div>
+              <h3 class="qa-artifact-title">Room Availability Is Restored After a Previous User's Hold Period Expires</h3>
+            </div>
+            <div class="qa-artifact-meta-badges">
+              <span class="badge-tag badge-critical">Severity: High</span>
+              <span class="badge-tag badge-p0">Priority: P1</span>
+              <span class="badge-tag badge-verified">Status: Ready for Automation</span>
+              <span class="badge-tag badge-tech">Booking Engine API</span>
+            </div>
+          </div>
+
+          <div class="qa-artifact-grid">
+            <div>
+              <div class="qa-field-label">Target Module</div>
+              <div class="qa-field-value">Room Inventory / Reservation Hold</div>
+            </div>
+            <div>
+              <div class="qa-field-label">Test Environment</div>
+              <div class="qa-field-value">Staging · Web Booking Engine · Chrome</div>
+            </div>
+            <div>
+              <div class="qa-field-label">Pre-conditions</div>
+              <div class="qa-field-value">One room is available; the inventory hold duration is 10 minutes.</div>
+            </div>
+            <div>
+              <div class="qa-field-label">Execution Type</div>
+              <div class="qa-field-value">End-to-End / Time-based Validation</div>
+            </div>
+          </div>
+
+          <div class="qa-steps-table-wrapper">
+            <table class="qa-steps-table">
+              <thead>
+                <tr>
+                  <th style="width: 55px;">#</th>
+                  <th>Action / Step</th>
+                  <th>Test Input Data</th>
+                  <th>Expected Result</th>
+                  <th style="width: 80px;">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>1</strong></td>
+                  <td>User A selects the last available room and continues to the payment step.</td>
+                  <td>Deluxe Room · Stay dates: 12–14 Oct</td>
+                  <td>The room inventory is held for User A and is unavailable to other users during the hold period.</td>
+                  <td><span class="badge-tag badge-verified">Pass</span></td>
+                </tr>
+                <tr>
+                  <td><strong>2</strong></td>
+                  <td>User A does not complete payment; wait until the 10-minute inventory hold expires.</td>
+                  <td>Payment: Not completed</td>
+                  <td>The reservation hold expires automatically and no confirmed booking is created.</td>
+                  <td><span class="badge-tag badge-verified">Pass</span></td>
+                </tr>
+                <tr>
+                  <td><strong>3</strong></td>
+                  <td>User B searches for the same room and stay dates after the hold period has expired.</td>
+                  <td>Deluxe Room · Stay dates: 12–14 Oct</td>
+                  <td>Room availability is restored, and User B can select the room and continue to checkout.</td>
+                  <td><span class="badge-tag badge-verified">Pass</span></td>
+                </tr>
+                <tr>
+                  <td><strong>4</strong></td>
+                  <td>User A tries to continue from the expired payment page.</td>
+                  <td>Expired reservation hold</td>
+                  <td>The system informs User A that the hold has expired, requires a new search, and prevents duplicate or oversold bookings.</td>
+                  <td><span class="badge-tag badge-verified">Pass</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -554,7 +637,7 @@ WARN: Concurrent balance modification detected on wallet W-84920 without active 
           <div class="timeline-year">Sep 2024 — Present</div>
           <div class="timeline-dot"></div>
           <div>
-            <h3>Starworks Global Pte Ltd</h3>
+            <h3>PT. Starworks Technologies Indonesia</h3>
             <p class="timeline-role">Senior Quality Assurance Tester<span>SENIOR QA &amp; TEST STRATEGY</span></p>
             <p>Leading end-to-end quality assurance, test architecture, and regression suites across web and mobile platforms in the StarWORKS ecosystem. Directing automated testing strategies, continuous integration workflows, and release readiness.</p>
             <div class="experience-skills" style="display:flex; flex-wrap:wrap; gap:6px; margin:14px 0 10px;">
@@ -573,7 +656,7 @@ WARN: Concurrent balance modification detected on wallet W-84920 without active 
           <div class="timeline-year">Sep 2021 — Sep 2024</div>
           <div class="timeline-dot"></div>
           <div>
-            <h3>Starworks Global Pte Ltd</h3>
+            <h3>PT. Starworks Technologies Indonesia</h3>
             <p class="timeline-role">QA Tester<span>ECOSYSTEM QUALITY ASSURANCE</span></p>
             <p>Executed comprehensive manual and automated testing across web and mobile platforms in the StarWORKS ecosystem:</p>
             <ul style="margin: 8px 0 12px 18px; color: var(--muted); font-size: 0.92rem; line-height: 1.6;">
